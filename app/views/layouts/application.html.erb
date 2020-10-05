@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Portfolio</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <!-- header始まり -->
+  <header>
+    <div class="logo">
+      <a href="index.html"><img src="images/logo.png" alt="SNAPPERS"></a>
+    </div>
+    <nav>
+      <ul class="global-nav">
+        <li><%= link_to "Portfolio", root_path %></li>
+        <li><%= link_to "About", about_index_path %></li>
+        <li><%= link_to "Contact", contact_index_path %></li>
+      </ul>
+    </nav>
+  </header>
+  <!-- header終わり -->
+
+    <%= yield %>
+
+      <!-- footer始まり -->
+  <footer>
+    <small>(C)2017 Hattori-studio.</small>
+  </footer>
+  <!-- footer終わり -->
+
+  </body>
+</html>
